@@ -1,0 +1,171 @@
+.top-bar {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  gap: 1rem;
+  width: 100%;
+  justify-content: space-between;
+  background: #010409;
+}
+
+.top-left,
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.top-btn {
+  padding: 0.5rem;
+  color: #7d8590;
+  background: transparent;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+}
+
+.top-btn:hover {
+  color: #fff;
+  background: #21262d;
+}
+
+.top-btn-split {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.top-btn-copilot .top-copilot-icon {
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+  border-right: 1px solid #7d8590;
+}
+
+.top-btn-copilot .top-copilot-icon svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.top-logo {
+  color: #fff;
+}
+
+.top-logo:hover {
+  color: #7d8590;
+}
+
+.top-username {
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.top-search {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  color: #7d8590;
+  min-width: 14rem;
+}
+
+.top-search:hover {
+  border-color: #6e7681;
+}
+
+.top-sep {
+  width: 1px;
+  height: 1.5rem;
+  background: #30363d;
+}
+
+.top-icon-sm {
+  width: 1rem;
+  height: 1rem;
+}
+
+.top-icon-lg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.top-icon-xl {
+  width: 2rem;
+  height: 2rem;
+}
+
+.top-caret {
+  width: 0.5rem;
+  height: 0.5rem;
+  transform: rotate(180deg);
+  margin-left: 0.25rem;
+}
+
+.top-tooltip {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background: #1c2128;
+  color: #fff;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid #30363d;
+  white-space: nowrap;
+  z-index: 50;
+}
+
+.top-tooltip-r {
+  left: auto;
+  right: 0;
+}
+
+.top-btn-badge {
+  position: relative;
+}
+
+.top-badge {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #539bf5;
+  box-shadow: 0 0 0 1px #010409;
+}
+
+.top-avatar-wrap {
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+}
+
+.top-avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #21262d;
+}
+
+@media (max-width: 768px) {
+  .top-username {
+    display: none;
+  }
+
+  .top-search {
+    min-width: 8rem;
+  }
+
+  .top-btn:nth-child(4),
+  .top-btn:nth-child(5) {
+    display: none;
+  }
+}
