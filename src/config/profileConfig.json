@@ -16,6 +16,13 @@
     },
     "activityOverview": {
       "categories": ["Commits", "Code review", "Issues", "Pull requests"]
+    },
+    "profilePage": {
+      "contributionActivityTitle": "Contribution activity",
+      "showMoreActivity": "Show more activity",
+      "profileGuidePrefix": "Seeing something unexpected? Take a look at the ",
+      "profileGuide": "GitHub profile guide.",
+      "privateRepoSuffix": "in private repositories"
     }
   },
   "mockData": {
@@ -93,6 +100,27 @@
         "languageColor": "#3178c6"
       }
     ],
-    "contributions": []
+    "contributions": [],
+    "contributionActivity": {
+      "commits": {
+        "count": 56,
+        "repoCount": 11
+      },
+      "pullRequests": {
+        "count": 29,
+        "repoCount": 5,
+        "repos": [
+          { "name": "UptimeAI/uptime_webapp", "merged": 16, "open": 1 },
+          { "name": "UptimeAI/uptime_ml", "merged": 6, "open": 0 },
+          { "name": "UptimeAI/uptime_scripts", "merged": 4, "open": 0 },
+          { "name": "UptimeAI/uptime_engine", "merged": 1, "open": 0 },
+          { "name": "UptimeAI/uptime_ml_encrypted", "merged": 1, "open": 0 }
+        ]
+      },
+      "privateContributions": {
+        "count": 0,
+        "dateRange": ""
+      }
+    }
   }
 }

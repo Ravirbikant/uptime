@@ -12,7 +12,8 @@ const defaultBreakdown = {
 const defaultCategories = ["Commits", "Code review", "Issues", "Pull requests"];
 
 export default function ActivityGraph() {
-  const activityData = profileConfig.mockData?.activityBreakdown ?? defaultBreakdown;
+  const activityData =
+    profileConfig.mockData?.activityBreakdown ?? defaultBreakdown;
   const categories =
     profileConfig.texts?.activityOverview?.categories ?? defaultCategories;
   const values = [
