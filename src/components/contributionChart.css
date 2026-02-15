@@ -1,5 +1,12 @@
 .contribution-chart {
   color: #e6edf3;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.contribution-chart-graph {
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 .contribution-chart-title {

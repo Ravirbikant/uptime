@@ -11,7 +11,6 @@ interface IContributionChartProps {
 
 const LEGEND_COLORS = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"];
 
-
 export default function ContributionChart({
   selectedYear: propSelectedYear,
 }: IContributionChartProps) {
@@ -27,7 +26,10 @@ export default function ContributionChart({
   const selectedYear = propSelectedYear ?? currentYear;
 
   const { heatmapData, totalContributions } = useMemo(() => {
-    const raw = (contributions?.contributions || []) as { date: string; count: number }[];
+    const raw = (contributions?.contributions || []) as {
+      date: string;
+      count: number;
+    }[];
     const dataMap = new Map<string, number>();
     let total = 0;
     raw.forEach((d) => {
@@ -62,11 +64,12 @@ export default function ContributionChart({
       calendar: {
         range: [`${selectedYear}-01-01`, `${selectedYear}-12-31`],
         cellSize: [10, 10],
+        cellGap: 0,
         top: 40,
         left: 30,
         right: 10,
         bottom: 10,
-        itemStyle: { color: "#161b22", borderWidth: 0 },
+        itemStyle: { color: "#161b22", borderWidth: 0, borderRadius: 2 },
         yearLabel: { show: false },
         monthLabel: {
           color: "#e6edf3",
@@ -99,10 +102,11 @@ export default function ContributionChart({
           type: "heatmap",
           coordinateSystem: "calendar",
           data: heatmapData,
+          itemStyle: { borderRadius: 2 },
         },
       ],
     }),
-    [heatmapData, selectedYear]
+    [heatmapData, selectedYear],
   );
 
   return (
@@ -110,12 +114,14 @@ export default function ContributionChart({
       <div className="contribution-chart-title">
         {totalContributions.toLocaleString()} contributions in {selectedYear}
       </div>
-      <ReactECharts
-        echarts={echarts}
-        option={option}
-        style={{ height: 140, width: "100%" }}
-        opts={{ renderer: "canvas" }}
-      />
+      <div className="contribution-chart-graph">
+        <ReactECharts
+          echarts={echarts}
+          option={option}
+          style={{ height: 140, width: "100%" }}
+          opts={{ renderer: "canvas" }}
+        />
+      </div>
       <div className="contribution-chart-footer">
         <a href="#" className="contribution-chart-link">
           {contributionTexts.learnHow}
