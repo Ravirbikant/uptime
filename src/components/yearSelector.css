@@ -1,0 +1,30 @@
+.year-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.year-selector-btn {
+  padding: 0.375rem 0.75rem;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  color: #7d8590;
+  font-size: 0.875rem;
+  cursor: pointer;
+  text-align: left;
+}
+
+.year-selector-btn:hover {
+  color: #e6edf3;
+  background: #21262d;
+}
+
+.year-selector-btn-active {
+  color: #e6edf3;
+  background: #388bfd;
+}
+
+.year-selector-btn-active:hover {
+  background: #4d9bff;
+}

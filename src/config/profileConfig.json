@@ -8,6 +8,11 @@
       "publicLabel": "Public",
       "privateLabel": "Private",
       "forkedFrom": "Forked from"
+    },
+    "contributions": {
+      "learnHow": "Learn how we count contributions",
+      "less": "Less",
+      "more": "More"
     }
   },
   "mockData": {
@@ -66,6 +71,7 @@
         "language": "TypeScript",
         "languageColor": "#3178c6"
       }
-    ]
+    ],
+    "contributions": []
   }
 }

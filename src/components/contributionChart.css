@@ -1,0 +1,45 @@
+.contribution-chart {
+  color: #e6edf3;
+}
+
+.contribution-chart-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contribution-chart-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.75rem;
+}
+
+.contribution-chart-link {
+  font-size: 0.75rem;
+  color: #539bf5;
+  text-decoration: none;
+}
+
+.contribution-chart-link:hover {
+  text-decoration: underline;
+}
+
+.contribution-chart-legend {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: #7d8590;
+}
+
+.contribution-chart-legend-squares {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.contribution-chart-legend-sq {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
