@@ -1,6 +1,7 @@
 import "./Body.css";
 import SidebarProfile from "./SidebarProfile";
 import PopularRepositories from "./PopularRepositories";
+import Activity from "./Activity";
 
 function Body() {
   return (
@@ -9,6 +10,7 @@ function Body() {
         <SidebarProfile />
         <div className="body-content">
           <PopularRepositories />
+          <Activity />
         </div>
       </div>
     </main>
