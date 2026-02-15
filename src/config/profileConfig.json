@@ -16,6 +16,18 @@
     }
   },
   "mockData": {
+    "activityOverview": {
+      "tags": [
+        { "label": "@UptimeAI", "color": "#a371f7" },
+        { "label": "@timescale", "color": "#7ee787" }
+      ],
+      "contributedRepos": [
+        "UptimeAI/uptime_webapp",
+        "UptimeAI/uptime_server",
+        "UptimeAI/uptime_ml"
+      ],
+      "otherReposCount": 13
+    },
     "popularRepositories": [
       {
         "name": "Complete-Python-3-Bootcamp",
