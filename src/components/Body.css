@@ -1,0 +1,19 @@
+.body-main {
+  min-height: 100vh;
+  background: #0d1117;
+  padding-top: 40px;
+}
+
+.body-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  min-height: inherit;
+  display: flex;
+  gap: 2rem;
+}
+
+.body-content {
+  flex: 1;
+  min-width: 0;
+}
