@@ -1,0 +1,71 @@
+{
+  "user": {
+    "login": "shreeramk"
+  },
+  "texts": {
+    "popularRepositories": {
+      "title": "Popular repositories",
+      "publicLabel": "Public",
+      "privateLabel": "Private",
+      "forkedFrom": "Forked from"
+    }
+  },
+  "mockData": {
+    "popularRepositories": [
+      {
+        "name": "Complete-Python-3-Bootcamp",
+        "isPublic": true,
+        "isFork": true,
+        "forkedFrom": "Pierian-Data/Complete-Python-3-Bootcamp",
+        "description": "Course Files for Complete Python 3 Bootcamp Course on Udemy",
+        "language": "Jupyter Notebook",
+        "languageColor": "#da5b0b"
+      },
+      {
+        "name": "flutter_login_ui",
+        "isPublic": true,
+        "isFork": true,
+        "forkedFrom": "MarcusNg/flutter_login_ui",
+        "description": "",
+        "language": "Dart",
+        "languageColor": "#00b4ab"
+      },
+      {
+        "name": "gitignore",
+        "isPublic": true,
+        "isFork": true,
+        "forkedFrom": "github/gitignore",
+        "description": "A collection of useful .gitignore templates",
+        "language": null,
+        "languageColor": null
+      },
+      {
+        "name": "kafkajs",
+        "isPublic": true,
+        "isFork": true,
+        "forkedFrom": "tulios/kafkajs",
+        "description": "A modern Apache Kafka client for node.js",
+        "language": "JavaScript",
+        "languageColor": "#f1e05a"
+      },
+      {
+        "name": "node-opcua-logger",
+        "isPublic": true,
+        "isFork": true,
+        "forkedFrom": "coussej/node-opcua-logger",
+        "description": "An OPCUA Client for logging data to InfluxDB! 🔥",
+        "language": "JavaScript",
+        "languageColor": "#f1e05a"
+      },
+      {
+        "name": "node-opcua-1",
+        "isPublic": true,
+        "isFork": true,
+        "forkedFrom": "node-opcua/node-opcua",
+        "description": "an implementation of a OPC UA stack fully written in javascript and nodejs - http://node-opcua.github.io/",
+        "language": "TypeScript",
+        "languageColor": "#3178c6"
+      }
+    ]
+  }
+}
