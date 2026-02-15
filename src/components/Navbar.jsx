@@ -2,11 +2,11 @@ import "./navbar.css";
 import Top from "./Top";
 import ProfileTabs from "./ProfileTabs";
 
-function Navbar() {
+function Navbar({ activeTabId, onTabChange }) {
   return (
     <header className="navbar-header">
       <Top />
-      <ProfileTabs />
+      <ProfileTabs activeId={activeTabId} onSelect={onTabChange} />
     </header>
   );
 }

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { GoBook, GoRepo, GoProject, GoPackage, GoStar } from "react-icons/go";
 import "./ProfileTabs.css";
 
@@ -10,9 +9,7 @@ const tabs = [
   { id: "stars", name: "Stars", icon: GoStar, count: 6 },
 ];
 
-function ProfileTabs() {
-  const [activeId, setActiveId] = useState("overview");
-
+function ProfileTabs({ activeId = "overview", onSelect }) {
   return (
     <nav className="profile-tabs">
       <div className="profile-tabs-inner">
@@ -24,7 +21,7 @@ function ProfileTabs() {
               key={tab.id}
               type="button"
               className={`profile-tab ${isActive ? "profile-tab-active" : ""}`}
-              onClick={() => setActiveId(tab.id)}
+              onClick={() => onSelect?.(tab.id)}
             >
               <Icon size={16} className="profile-tab-icon" />
               <span>{tab.name}</span>

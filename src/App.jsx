@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import { ProfileProvider } from "./context/ProfileContext";
 import { ToastProvider } from "./context/ToastContext";
@@ -6,11 +7,13 @@ import Body from "./components/Body";
 import Footer from "./components/Footer";
 
 function App() {
+  const [activeTabId, setActiveTabId] = useState("overview");
+
   return (
     <ProfileProvider>
       <ToastProvider>
-        <Navbar />
-        <Body />
+        <Navbar activeTabId={activeTabId} onTabChange={setActiveTabId} />
+        <Body activeTabId={activeTabId} />
         <Footer />
       </ToastProvider>
     </ProfileProvider>
