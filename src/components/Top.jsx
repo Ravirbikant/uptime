@@ -8,11 +8,11 @@ import { VscGitPullRequest } from "react-icons/vsc";
 import CopilotIcon from "../icons/CopilotIcon.jsx";
 import NotificationsIcon from "../icons/NotificationsIcon.jsx";
 import { useToast } from "../context/ToastContext";
+import profileConfig from "../config/profileConfig.json";
 import "./Top.css";
 
-const username = "shreeramk";
-
 function Top() {
+  const { login: username, avatar_url: avatarUrl } = profileConfig.user || { login: "shreeramk" };
   const [showTooltip, setShowTooltip] = useState(null);
   const { showToast } = useToast();
 
@@ -137,7 +137,11 @@ function Top() {
           onClick={() => showToast("Profile", "On GitHub, this opens your profile and account menu.")}
           aria-label="Profile"
         >
-          <div className="top-avatar" />
+          {avatarUrl ? (
+            <img src={avatarUrl} alt="" className="top-avatar top-avatar-img" />
+          ) : (
+            <div className="top-avatar" />
+          )}
           {showTooltip === "profile" && (
             <span className="top-tooltip top-tooltip-r">Profile</span>
           )}

@@ -6,6 +6,7 @@ import {
   VscLink,
   VscTwitter,
 } from "react-icons/vsc";
+import profileConfig from "../config/profileConfig.json";
 import "./sidebarProfile.css";
 
 const mockUser = {
@@ -22,13 +23,17 @@ const mockUser = {
 };
 
 function SidebarProfile() {
-  const user = mockUser;
+  const user = { ...mockUser, ...profileConfig.user };
 
   return (
     <aside className="sidebar-profile">
       <div className="sidebar-profile-sticky">
         <div className="sidebar-avatar-wrap">
-          <div className="sidebar-avatar" />
+          {user.avatar_url ? (
+            <img src={user.avatar_url} alt="" className="sidebar-avatar" />
+          ) : (
+            <div className="sidebar-avatar" />
+          )}
         </div>
         <h1 className="sidebar-name">{user.name}</h1>
         <p className="sidebar-login">{user.login}</p>

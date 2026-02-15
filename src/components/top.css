@@ -181,6 +181,11 @@
   background: #eaeef2;
 }
 
+.top-avatar-img {
+  display: block;
+  object-fit: cover;
+}
+
 @media (max-width: 768px) {
   .top-search {
     min-width: 8rem;
