@@ -1,9 +1,11 @@
 import profileConfig from "../config/profileConfig.json";
 import RepoIcon from "../icons/RepoIcon";
 import ForkIcon from "../icons/ForkIcon";
+import { useToast } from "../context/ToastContext";
 import "./popularRepositories.css";
 
 function PopularRepositories() {
+  const { showToast } = useToast();
   const {
     user,
     texts: { popularRepositories: repoTexts },
@@ -13,7 +15,17 @@ function PopularRepositories() {
 
   return (
     <div className="popular-repos">
-      <h2 className="popular-repos-title">{repoTexts.title}</h2>
+      <div className="popular-repos-header">
+        <h2 className="popular-repos-title">{repoTexts.title}</h2>
+        <button
+          type="button"
+          className="popular-repos-customize"
+          onClick={() => showToast("Customize your pins", "On GitHub, this lets you choose which repositories appear in this section.")}
+        >
+          Customize your pins
+        </button>
+      </div>
+
       <div className="popular-repos-grid">
         {repositories.map((repo) => (
           <div key={repo.name} className="popular-repos-card">

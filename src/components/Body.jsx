@@ -6,10 +6,26 @@ import ContributionActivity from "./ContributionActivity";
 import TabPlaceholder from "./TabPlaceholder";
 
 const TAB_PLACEHOLDERS = {
-  repositories: { title: "Repositories", message: "This is a placeholder for the Repositories tab. On GitHub, this shows your public repositories." },
-  projects: { title: "Projects", message: "This is a placeholder for the Projects tab. On GitHub, this shows your projects." },
-  packages: { title: "Packages", message: "This is a placeholder for the Packages tab. On GitHub, this shows your packages." },
-  stars: { title: "Stars", message: "This is a placeholder for the Stars tab. On GitHub, this shows repositories you have starred." },
+  repositories: {
+    title: "Repositories",
+    message:
+      "This is a placeholder for the Repositories tab. On GitHub, this shows your public repositories.",
+  },
+  projects: {
+    title: "Projects",
+    message:
+      "This is a placeholder for the Projects tab. On GitHub, this shows your projects.",
+  },
+  packages: {
+    title: "Packages",
+    message:
+      "This is a placeholder for the Packages tab. On GitHub, this shows your packages.",
+  },
+  stars: {
+    title: "Stars",
+    message:
+      "This is a placeholder for the Stars tab. On GitHub, this shows repositories you have starred.",
+  },
 };
 
 function Body({ activeTabId = "overview" }) {
@@ -27,7 +43,10 @@ function Body({ activeTabId = "overview" }) {
               <ContributionActivity />
             </>
           ) : placeholder ? (
-            <TabPlaceholder title={placeholder.title} message={placeholder.message} />
+            <TabPlaceholder
+              title={placeholder.title}
+              message={placeholder.message}
+            />
           ) : null}
         </div>
       </div>

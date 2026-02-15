@@ -2,11 +2,32 @@
   margin-bottom: 1.5rem;
 }
 
+.popular-repos-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
 .popular-repos-title {
   font-size: 1rem;
   font-weight: 400;
   color: #1f2328;
-  margin: 0 0 1rem;
+  margin: 0;
+}
+
+.popular-repos-customize {
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 0.875rem;
+  color: #0969da;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.popular-repos-customize:hover {
+  text-decoration: underline;
 }
 
 .popular-repos-grid {
