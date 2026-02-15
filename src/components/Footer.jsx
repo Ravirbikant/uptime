@@ -18,7 +18,6 @@ export default function Footer() {
 
   return (
     <footer className="footer">
-      <div className="footer-sep" />
       <div className="footer-inner">
         <div className="footer-left">
           <FaGithub className="footer-logo" />
