@@ -5,7 +5,7 @@
 .popular-repos-title {
   font-size: 1rem;
   font-weight: 400;
-  color: #e6edf3;
+  color: #1f2328;
   margin: 0 0 1rem;
 }
 
@@ -23,13 +23,14 @@
 
 .popular-repos-card {
   padding: 1rem;
-  border: 1px solid #30363d;
+  border: 1px solid #d0d7de;
   border-radius: 6px;
+  background: #ffffff;
   transition: border-color 0.15s;
 }
 
 .popular-repos-card:hover {
-  border-color: #8b949e;
+  border-color: #8c959f;
 }
 
 .popular-repos-card-header {
@@ -53,7 +54,7 @@
 }
 
 .popular-repos-link {
-  color: #539bf5;
+  color: #0969da;
   font-weight: 600;
   font-size: 0.875rem;
   text-decoration: none;
@@ -69,9 +70,9 @@
 .popular-repos-badge {
   padding: 0.125rem 0.5rem;
   font-size: 0.75rem;
-  border: 1px solid #30363d;
+  border: 1px solid #d0d7de;
   border-radius: 9999px;
-  color: #7d8590;
+  color: #656d76;
   flex-shrink: 0;
 }
 
@@ -81,7 +82,7 @@
   gap: 0.25rem;
   margin-bottom: 0.5rem;
   font-size: 0.75rem;
-  color: #7d8590;
+  color: #656d76;
 }
 
 .popular-repos-fork svg {
@@ -92,7 +93,7 @@
 
 .popular-repos-desc {
   font-size: 0.75rem;
-  color: #7d8590;
+  color: #656d76;
   margin: 0 0 0.75rem;
   overflow: hidden;
 }
@@ -102,7 +103,7 @@
   align-items: center;
   gap: 0.25rem;
   font-size: 0.75rem;
-  color: #7d8590;
+  color: #656d76;
 }
 
 .popular-repos-lang-dot {

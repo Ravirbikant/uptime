@@ -57,9 +57,9 @@ export default function ContributionChart({
           if (count === 1) return `1 contribution on ${date}`;
           return `${count} contributions on ${date}`;
         },
-        backgroundColor: "#161b22",
-        borderColor: "#30363d",
-        textStyle: { color: "#e6edf3" },
+        backgroundColor: "#ffffff",
+        borderColor: "#d0d7de",
+        textStyle: { color: "#1f2328" },
       },
       calendar: {
         range: [`${selectedYear}-01-01`, `${selectedYear}-12-31`],
@@ -69,15 +69,15 @@ export default function ContributionChart({
         left: 30,
         right: 10,
         bottom: 10,
-        itemStyle: { color: "#161b22", borderWidth: 0, borderRadius: 2 },
+        itemStyle: { color: "#ebedf0", borderWidth: 0, borderRadius: 2 },
         yearLabel: { show: false },
         monthLabel: {
-          color: "#e6edf3",
+          color: "#1f2328",
           fontSize: 10,
           nameMap: "en",
         },
         dayLabel: {
-          color: "#7d8590",
+          color: "#656d76",
           fontSize: 9,
           firstDay: 1,
           nameMap: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
@@ -90,7 +90,7 @@ export default function ContributionChart({
         type: "piecewise",
         dimension: 1,
         pieces: [
-          { min: 0, max: 0, color: "#161b22" },
+          { min: 0, max: 0, color: "#ebedf0" },
           { min: 1, max: 3, color: "#0e4429" },
           { min: 4, max: 6, color: "#006d32" },
           { min: 7, max: 9, color: "#26a641" },

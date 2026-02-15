@@ -1,5 +1,6 @@
 .navbar-header {
-  background: #010409;
+  background: #ffffff;
+  border-bottom: 1px solid #d0d7de;
   width: 100%;
   position: sticky;
   top: 0;

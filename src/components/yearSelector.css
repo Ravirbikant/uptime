@@ -9,22 +9,22 @@
   background: transparent;
   border: none;
   border-radius: 6px;
-  color: #7d8590;
+  color: #656d76;
   font-size: 0.875rem;
   cursor: pointer;
   text-align: left;
 }
 
 .year-selector-btn:hover {
-  color: #e6edf3;
-  background: #21262d;
+  color: #1f2328;
+  background: #f6f8fa;
 }
 
 .year-selector-btn-active {
-  color: #e6edf3;
-  background: #388bfd;
+  color: #ffffff;
+  background: #0969da;
 }
 
 .year-selector-btn-active:hover {
-  background: #4d9bff;
+  background: #0550ae;
 }

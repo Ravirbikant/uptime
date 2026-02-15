@@ -2,6 +2,7 @@ import { useState } from "react";
 import ContributionChart from "./ContributionChart";
 import YearSelector from "./YearSelector";
 import ActivityOverview from "./ActivityOverview";
+import ActivityGraph from "./ActivityGraph";
 import "./activity.css";
 
 function Activity() {
@@ -18,7 +19,9 @@ function Activity() {
             <div className="activity-overview-half">
               <ActivityOverview />
             </div>
-            <div className="activity-graph-placeholder" />
+            <div className="activity-graph-half">
+              <ActivityGraph />
+            </div>
           </div>
         </div>
         <div className="activity-years">
