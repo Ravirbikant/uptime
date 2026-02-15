@@ -48,6 +48,11 @@
   height: 1rem;
 }
 
+.top-btn.top-logo {
+  border: none;
+  padding: 0.5rem;
+}
+
 .top-logo {
   color: #1f2328;
 }
@@ -56,10 +61,18 @@
   color: #656d76;
 }
 
-.top-username {
+.top-username-btn {
+  padding: 0;
+  border: none;
+  background: none;
   color: #1f2328;
   font-size: 0.875rem;
   font-weight: 600;
+  cursor: pointer;
+}
+
+.top-username-btn:hover {
+  color: #0969da;
 }
 
 .top-search {
@@ -73,10 +86,23 @@
   font-size: 0.875rem;
   color: #656d76;
   min-width: 14rem;
+  cursor: pointer;
 }
 
 .top-search:hover {
   border-color: #8c959f;
+}
+
+@media (min-width: 769px) {
+  .top-username-btn {
+    display: inline;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-username-btn {
+    display: none;
+  }
 }
 
 .top-sep {
@@ -156,10 +182,6 @@
 }
 
 @media (max-width: 768px) {
-  .top-username {
-    display: none;
-  }
-
   .top-search {
     min-width: 8rem;
   }
