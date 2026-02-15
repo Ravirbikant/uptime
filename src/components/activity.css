@@ -44,6 +44,20 @@
   min-height: 200px;
 }
 
+.activity-row-sep {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background: #d0d7de;
+}
+
+@media (min-width: 768px) {
+  .activity-row-sep {
+    width: 1px;
+    height: auto;
+    align-self: stretch;
+  }
+}
+
 .activity-graph-half {
   flex: 1;
   min-width: 0;

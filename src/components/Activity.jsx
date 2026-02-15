@@ -19,6 +19,7 @@ function Activity() {
             <div className="activity-overview-half">
               <ActivityOverview />
             </div>
+            <div className="activity-row-sep" />
             <div className="activity-graph-half">
               <ActivityGraph />
             </div>

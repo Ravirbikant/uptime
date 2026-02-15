@@ -51,9 +51,8 @@ export default function ActivityGraph() {
         <Plot
           data={radarData}
           layout={{
-            width: 280,
-            height: 280,
-            margin: { l: 60, r: 60, t: 60, b: 60 },
+            width: 300,
+            height: 300,
             paper_bgcolor: "#ffffff",
             plot_bgcolor: "#ffffff",
             polar: {
