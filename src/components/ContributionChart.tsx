@@ -111,9 +111,6 @@ export default function ContributionChart({
 
   return (
     <div className="contribution-chart">
-      <div className="contribution-chart-title">
-        {totalContributions.toLocaleString()} contributions in {selectedYear}
-      </div>
       <div className="contribution-chart-graph">
         <ReactECharts
           echarts={echarts}
