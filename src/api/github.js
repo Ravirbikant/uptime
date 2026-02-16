@@ -1,4 +1,15 @@
 const GITHUB_GRAPHQL = "https://api.github.com/graphql";
+const GITHUB_REST = "https://api.github.com";
+
+export async function fetchUser(username) {
+  try {
+    const res = await fetch(`${GITHUB_REST}/users/${username}`);
+    if (!res.ok) return null;
+    return await res.json();
+  } catch {
+    return null;
+  }
+}
 
 function getToken() {
   return import.meta.env.VITE_GITHUB_TOKEN || "";

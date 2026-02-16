@@ -6,24 +6,14 @@ import {
   VscLink,
   VscTwitter,
 } from "react-icons/vsc";
-import profileConfig from "../config/profileConfig.json";
+import { useProfile } from "../context/ProfileContext";
 import "./sidebarProfile.css";
 
-const mockUser = {
-  name: "Shreeram Kushwaha",
-  login: "shreeramk",
-  bio: "Director of Engineering @UptimeAI. Python, Angular, Javascript, NodeJS, MongoDB, InfluxDB, TimescaleDB, Streamsets, Kafka, AWS, Azure, HTML5, CSS",
-  followers: 11,
-  following: 3,
-  company: "UptimeAI",
-  location: "Bangalore, India",
-  email: "kushwaha.shreeram@gmail.com",
-  blog: "http://shreeramk.com",
-  twitter_username: "pom_het",
-};
-
 function SidebarProfile() {
-  const user = { ...mockUser, ...profileConfig.user };
+  const { user } = useProfile();
+  const name = user.name ?? user.login;
+  const followers = user.followers ?? 0;
+  const following = user.following ?? 0;
 
   return (
     <aside className="sidebar-profile">
@@ -35,7 +25,7 @@ function SidebarProfile() {
             <div className="sidebar-avatar" />
           )}
         </div>
-        <h1 className="sidebar-name">{user.name}</h1>
+        <h1 className="sidebar-name">{name}</h1>
         <p className="sidebar-login">{user.login}</p>
         <button type="button" className="sidebar-edit-btn">
           Edit profile
@@ -44,11 +34,11 @@ function SidebarProfile() {
         <div className="sidebar-follow">
           <GoPeople size={16} className="sidebar-icon" />
           <a href="#">
-            <strong>{user.followers}</strong> followers
+            <strong>{followers}</strong> followers
           </a>
           <span className="sidebar-dot">·</span>
           <a href="#">
-            <strong>{user.following}</strong> following
+            <strong>{following}</strong> following
           </a>
         </div>
         <div className="sidebar-details">
