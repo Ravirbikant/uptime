@@ -9,10 +9,12 @@ import CopilotIcon from "../icons/CopilotIcon.jsx";
 import NotificationsIcon from "../icons/NotificationsIcon.jsx";
 import { useToast } from "../context/ToastContext";
 import profileConfig from "../config/profileConfig.json";
-import "./Top.css";
+import "./top.css";
 
 function Top() {
-  const { login: username, avatar_url: avatarUrl } = profileConfig.user || { login: "shreeramk" };
+  const { login: username, avatar_url: avatarUrl } = profileConfig.user || {
+    login: "shreeramk",
+  };
   const [showTooltip, setShowTooltip] = useState(null);
   const { showToast } = useToast();
 
@@ -24,7 +26,9 @@ function Top() {
           className="top-btn"
           onMouseEnter={() => setShowTooltip("menu")}
           onMouseLeave={() => setShowTooltip(null)}
-          onClick={() => showToast("Menu", "On GitHub, this opens the main navigation menu.")}
+          onClick={() =>
+            showToast("Menu", "On GitHub, this opens the main navigation menu.")
+          }
           aria-label="Menu"
         >
           <LuSquareMenu className="top-icon-lg" />
@@ -35,7 +39,9 @@ function Top() {
           className="top-btn top-logo"
           onMouseEnter={() => setShowTooltip("home")}
           onMouseLeave={() => setShowTooltip(null)}
-          onClick={() => showToast("Home", "On GitHub, this goes to the home page.")}
+          onClick={() =>
+            showToast("Home", "On GitHub, this goes to the home page.")
+          }
           aria-label="Home"
         >
           <AiFillGithub className="top-icon-xl" />
@@ -44,7 +50,9 @@ function Top() {
         <button
           type="button"
           className="top-username-btn"
-          onClick={() => showToast("Profile", "On GitHub, this goes to your profile.")}
+          onClick={() =>
+            showToast("Profile", "On GitHub, this goes to your profile.")
+          }
         >
           {username}
         </button>
@@ -53,7 +61,12 @@ function Top() {
         <button
           type="button"
           className="top-search"
-          onClick={() => showToast("Search", "On GitHub, this focuses the search to find repositories, issues, and more.")}
+          onClick={() =>
+            showToast(
+              "Search",
+              "On GitHub, this focuses the search to find repositories, issues, and more.",
+            )
+          }
         >
           <FiSearch className="top-icon-sm" />
           <span>Type / to search</span>
@@ -63,7 +76,9 @@ function Top() {
           className="top-btn top-btn-split top-btn-copilot"
           onMouseEnter={() => setShowTooltip("copilot")}
           onMouseLeave={() => setShowTooltip(null)}
-          onClick={() => showToast("Copilot", "On GitHub, this opens GitHub Copilot.")}
+          onClick={() =>
+            showToast("Copilot", "On GitHub, this opens GitHub Copilot.")
+          }
           aria-label="Copilot"
         >
           <span className="top-copilot-icon">
@@ -80,7 +95,12 @@ function Top() {
           className="top-btn top-btn-split"
           onMouseEnter={() => setShowTooltip("create")}
           onMouseLeave={() => setShowTooltip(null)}
-          onClick={() => showToast("Create", "On GitHub, this opens the create new repository or organization dropdown.")}
+          onClick={() =>
+            showToast(
+              "Create",
+              "On GitHub, this opens the create new repository or organization dropdown.",
+            )
+          }
           aria-label="Create"
         >
           <FiPlus className="top-icon-sm" />
@@ -94,7 +114,9 @@ function Top() {
           className="top-btn"
           onMouseEnter={() => setShowTooltip("issues")}
           onMouseLeave={() => setShowTooltip(null)}
-          onClick={() => showToast("Issues", "On GitHub, this opens your issues.")}
+          onClick={() =>
+            showToast("Issues", "On GitHub, this opens your issues.")
+          }
           aria-label="Issues"
         >
           <GoIssueOpened className="top-icon-sm" />
@@ -107,7 +129,12 @@ function Top() {
           className="top-btn"
           onMouseEnter={() => setShowTooltip("pullRequests")}
           onMouseLeave={() => setShowTooltip(null)}
-          onClick={() => showToast("Pull requests", "On GitHub, this opens your pull requests.")}
+          onClick={() =>
+            showToast(
+              "Pull requests",
+              "On GitHub, this opens your pull requests.",
+            )
+          }
           aria-label="Pull requests"
         >
           <VscGitPullRequest className="top-icon-sm" />
@@ -120,7 +147,12 @@ function Top() {
           className="top-btn top-btn-badge"
           onMouseEnter={() => setShowTooltip("notifications")}
           onMouseLeave={() => setShowTooltip(null)}
-          onClick={() => showToast("Notifications", "On GitHub, this opens your notifications.")}
+          onClick={() =>
+            showToast(
+              "Notifications",
+              "On GitHub, this opens your notifications.",
+            )
+          }
           aria-label="Notifications"
         >
           <NotificationsIcon />
@@ -134,7 +166,12 @@ function Top() {
           className="top-btn top-avatar-wrap"
           onMouseEnter={() => setShowTooltip("profile")}
           onMouseLeave={() => setShowTooltip(null)}
-          onClick={() => showToast("Profile", "On GitHub, this opens your profile and account menu.")}
+          onClick={() =>
+            showToast(
+              "Profile",
+              "On GitHub, this opens your profile and account menu.",
+            )
+          }
           aria-label="Profile"
         >
           {avatarUrl ? (
