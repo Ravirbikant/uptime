@@ -1,16 +1,34 @@
-# React + Vite
+# GitHub Profile Page Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React app that replicates the GitHub user profile page layout and behavior. Built with Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- GitHub-style UI: navbar, profile tabs, left profile panel, main content (popular repos, contribution heatmap, activity overview, contribution activity), footer
+- **User profile (left panel):** Fetched from [GitHub User API](https://docs.github.com/en/rest/reference/users#get-a-user) (`GET https://api.github.com/users/:username`)
+- **Contribution heatmap:** Fetched via GitHub GraphQL API and rendered with ECharts. Requires a personal access token for live data.
+- Responsive layout, CSS-only styling
+- Working tabs (Overview, Repositories, Projects, Packages, Stars); non-Overview tabs show placeholder content
 
-## React Compiler
+## Setup
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+## Optional: Contribution graph live data
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The contribution calendar uses the GitHub GraphQL API, which requires authentication. Without a token, the app falls back to mock contribution data.
+
+1. Create a [GitHub personal access token](https://github.com/settings/tokens) with no scopes (or `read:user`).
+2. Create a `.env` file in the project root:
+   ```
+   VITE_GITHUB_TOKEN=your_token_here
+   ```
+3. Restart the dev server. The contribution heatmap will show real data for the user in `src/config/profileConfig.json` (default: `shreeramk`).
+
+## API references
+
+- [GitHub REST API](https://docs.github.com/en/rest/reference)
+- [GitHub Users API](https://docs.github.com/en/rest/reference/users#get-a-user)
