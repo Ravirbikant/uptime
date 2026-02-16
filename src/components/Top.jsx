@@ -8,13 +8,15 @@ import { VscGitPullRequest } from "react-icons/vsc";
 import CopilotIcon from "../icons/CopilotIcon.jsx";
 import NotificationsIcon from "../icons/NotificationsIcon.jsx";
 import { useToast } from "../context/ToastContext";
+import { useProfile } from "../context/ProfileContext";
 import profileConfig from "../config/profileConfig.json";
 import "./top.css";
 
 function Top() {
-  const { login: username, avatar_url: avatarUrl } = profileConfig.user || {
-    login: "shreeramk",
-  };
+  const { user } = useProfile();
+  const configUser = profileConfig.user || { login: "shreeramk" };
+  const username = user.login ?? configUser.login;
+  const avatarUrl = user.avatar_url ?? configUser.avatar_url;
   const [showTooltip, setShowTooltip] = useState(null);
   const { showToast } = useToast();
 
