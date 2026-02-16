@@ -1,5 +1,5 @@
 import { GoBook, GoRepo, GoProject, GoPackage, GoStar } from "react-icons/go";
-import "./ProfileTabs.css";
+import "./profileTabs.css";
 
 const tabs = [
   { id: "overview", name: "Overview", icon: GoBook },
